@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+### 🥐 1~3일차 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2일차와 3일차 수업을 제대로 듣지 않았기 때문에 벨로퍼트 블로그와 더불어서 애들 코드 보니까 react-router-dom (?) 설치가 되어있길래 그거에 대해서 12시부터 공부해본 결과. 수많은 오류들이 나를 반겨주었고 해결 하는데 거의 2시간 걸렸다. 심지어 브랜치 이해도가 낮은 편이라서 전에 팠던 main 브랜치가 왜 master에서 코드가 들어가는지 이해가 안 되었었는데 
 
-## Available Scripts
+```git push origin master```
+로 하고 있으니까 메인으로 코드가 안 넘어가서 애 먹고 있었다. 레전드라고 생각한다. 뒤 부분이 브랜치명이라는 걸 까먹었던 모양. 이제 브랜치 파고 하나하나 배울 때마다 추가적으로 넣을 예정이다 그때마다 배운 내용으로 README.md 내용이 달라진다. master는 아마 최종적으로 결과냈을 때 병합하지 않을까싶다.
 
-In the project directory, you can run:
+<br>
 
-### `yarn start`
+심지어 나는 다른 애들이 리액트 깔고 있는 동안 구경하고 있었던게 컸는지 리액트를 안 깔고 있어서 설치하는 법을 적어보도록 하겠다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🎆 create-react-app
+~~~
+$ npx create-react-app Project Name
+~~~
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🎇 react-router-dom
+~~~
+$ npm install --save react-router-dom
+~~~
+아마 설치가 되어있다면 
+~~~
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
+  },
+~~~
+에서 `"react-router-dom": "^5.2.0"`가 추가되어 있을 것이다.
 
-### `yarn test`
+## ⛳ 리액트 시작
+~~~
+$ yarn start
+~~~
+원래 msg.gg에서는 yarn dev로 했었던 거 같은데 어떻게 했는지 그것도 까먹버린 것이다! `npm start`, `npm run start`도 있다는 사실을 잊지말자!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 💎 App.js
+`import {Link} from 'react-router-dom';`에서 
+~~~
+ <Link className="App-link" to="/page">
+~~~
+여기서 
 
-### `yarn build`
+### 💍 index.js
+~~~
+<Route exact path="/" component={App}/>
+<Route exact path="/page" component={Page1}/>
+~~~
+`exact`가 왜 붙는지 이해가 안 되었는데 이게 만약 붙어있다면 경로에 맞게 떨어져야 컴포넌트가 보여준다는 걸 알았다. 정확히는 `/`도 있고 `/page`도 /가 있기 때문에 정확한 판별이 필요한 모양
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ✨ Page1.jsx
+처음에 html 아니면 하나의 문자열 문법인 줄 알았는데 아니다. 자바스크립트 문법이라 한다.
