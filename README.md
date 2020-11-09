@@ -1,4 +1,4 @@
-### 🥐 1~3일차 
+# 🥐 1~3일차 
 
 2일차와 3일차 수업을 제대로 듣지 않았기 때문에 벨로퍼트 블로그와 더불어서 애들 코드 보니까 react-router-dom (?) 설치가 되어있길래 그거에 대해서 12시부터 공부해본 결과. 수많은 오류들이 나를 반겨주었고 해결 하는데 거의 2시간 걸렸다. 심지어 브랜치 이해도가 낮은 편이라서 전에 팠던 main 브랜치가 왜 master에서 코드가 들어가는지 이해가 안 되었었는데 
 
@@ -21,6 +21,9 @@ $ npx create-react-app Project Name
 $ npm install --save react-router-dom
 ~~~
 아마 설치가 되어있다면 
+
+<br />
+
 ~~~
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
